@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestPopupApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KvF-Hu-Ibf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2e8-2T-PVG" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86L-C9-ITa" userLabel="AlertView">
+                                                <rect key="frame" x="48.5" y="289" width="317" height="240.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="REPORT USER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8bm-so-ewG">
+                                                        <rect key="frame" x="18" y="18" width="281" height="26.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yeC-Py-tvl">
+                                                        <rect key="frame" x="18" y="54.5" width="281" height="128"/>
+                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="128" id="9pi-oU-2RK"/>
+                                                        </constraints>
+                                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="aTQ-fD-OpY"/>
+                                                        </connections>
+                                                    </textView>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFl-gH-ODl">
+                                                        <rect key="frame" x="141" y="192.5" width="35" height="30"/>
+                                                        <state key="normal" title="Okay"/>
+                                                        <connections>
+                                                            <action selector="okayBtnAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jkq-2j-F56"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="8bm-so-ewG" secondAttribute="trailing" constant="10" id="4yY-M3-8us"/>
+                                                    <constraint firstItem="yeC-Py-tvl" firstAttribute="leading" secondItem="86L-C9-ITa" secondAttribute="leadingMargin" constant="10" id="I9c-P6-74f"/>
+                                                    <constraint firstItem="8bm-so-ewG" firstAttribute="leading" secondItem="86L-C9-ITa" secondAttribute="leadingMargin" constant="10" id="SXU-0A-VQQ"/>
+                                                    <constraint firstItem="8bm-so-ewG" firstAttribute="centerX" secondItem="86L-C9-ITa" secondAttribute="centerX" id="avc-yA-Kpn"/>
+                                                    <constraint firstItem="ZFl-gH-ODl" firstAttribute="centerX" secondItem="8bm-so-ewG" secondAttribute="centerX" id="cSL-jh-qxz"/>
+                                                    <constraint firstItem="8bm-so-ewG" firstAttribute="top" secondItem="86L-C9-ITa" secondAttribute="topMargin" constant="10" id="gb6-ad-Nlc"/>
+                                                    <constraint firstAttribute="trailingMargin" secondItem="yeC-Py-tvl" secondAttribute="trailing" constant="10" id="hpw-Z0-GA1"/>
+                                                    <constraint firstItem="ZFl-gH-ODl" firstAttribute="top" secondItem="yeC-Py-tvl" secondAttribute="bottom" constant="10" id="mpF-Aq-iEB"/>
+                                                    <constraint firstAttribute="bottomMargin" secondItem="ZFl-gH-ODl" secondAttribute="bottom" constant="10" id="nUx-L1-eEi"/>
+                                                    <constraint firstItem="yeC-Py-tvl" firstAttribute="top" secondItem="8bm-so-ewG" secondAttribute="bottom" constant="10" id="ut5-pH-GWs"/>
+                                                    <constraint firstAttribute="width" constant="317" id="vFT-rt-Gqb"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottomMargin" relation="greaterThanOrEqual" secondItem="86L-C9-ITa" secondAttribute="bottom" constant="20" id="3wn-Cv-D01"/>
+                                            <constraint firstItem="86L-C9-ITa" firstAttribute="top" relation="greaterThanOrEqual" secondItem="2e8-2T-PVG" secondAttribute="topMargin" constant="20" id="6ro-G4-neX"/>
+                                            <constraint firstItem="86L-C9-ITa" firstAttribute="centerY" secondItem="2e8-2T-PVG" secondAttribute="centerY" id="L9B-Dw-zye"/>
+                                            <constraint firstItem="86L-C9-ITa" firstAttribute="centerX" secondItem="2e8-2T-PVG" secondAttribute="centerX" id="idw-RA-j2w"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="2e8-2T-PVG" firstAttribute="top" secondItem="KvF-Hu-Ibf" secondAttribute="top" id="4I3-4I-pkr"/>
+                                    <constraint firstAttribute="bottom" secondItem="2e8-2T-PVG" secondAttribute="bottom" id="Cdp-gk-BiO"/>
+                                    <constraint firstItem="2e8-2T-PVG" firstAttribute="width" secondItem="KvF-Hu-Ibf" secondAttribute="width" id="Ee0-Ud-IW1"/>
+                                    <constraint firstItem="2e8-2T-PVG" firstAttribute="leading" secondItem="KvF-Hu-Ibf" secondAttribute="leading" id="ObN-7R-wfh"/>
+                                    <constraint firstItem="2e8-2T-PVG" firstAttribute="height" secondItem="KvF-Hu-Ibf" secondAttribute="height" priority="250" id="dQL-Kc-F8c"/>
+                                    <constraint firstAttribute="trailing" secondItem="2e8-2T-PVG" secondAttribute="trailing" id="v0E-3O-AfZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.63137254901960782" green="0.63137254901960782" blue="0.63137254901960782" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KvF-Hu-Ibf" secondAttribute="trailing" id="4sx-89-ZMV"/>
+                            <constraint firstItem="KvF-Hu-Ibf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="NvT-zK-DWr"/>
+                            <constraint firstItem="KvF-Hu-Ibf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="XQD-tU-sEZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="KvF-Hu-Ibf" secondAttribute="bottom" id="iPX-0Z-lRz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="alertBaseView" destination="86L-C9-ITa" id="dCU-5f-iJZ"/>
+                        <outlet property="commentTextView" destination="yeC-Py-tvl" id="2Yl-xG-y3H"/>
+                        <outlet property="commentTextViewHeightConstraint" destination="9pi-oU-2RK" id="BfC-7I-H0Q"/>
+                        <outlet property="myScrollView" destination="KvF-Hu-Ibf" id="5aB-oN-4MM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="111.83035714285714"/>
+        </scene>
+    </scenes>
+</document>
